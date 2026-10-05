@@ -3,3 +3,12 @@ const grid=document.getElementById('grid'),search=document.getElementById('searc
 const cats=['All',...new Set(products.map(x=>x.cat))];filters.innerHTML=cats.map((c,i)=>`<button class="${i?'':'active'}" data-cat="${c}">${c}</button>`).join('');
 function render(){let q=search.value.toLowerCase();let rows=products.filter(x=>(active==='All'||x.cat===active)&&(x.name+' '+x.cat+' '+x.desc).toLowerCase().includes(q));count.textContent=rows.length+' research pages';grid.innerHTML=rows.map(x=>`<article class="card"><span class="tag">${x.cat}</span><h3>${x.name}</h3><p>${x.desc}</p><div class="links"><a class="study" href="${x.page}">Open research page →</a></div></article>`).join('')}
 search.oninput=render;filters.onclick=e=>{if(e.target.tagName!=='BUTTON')return;active=e.target.dataset.cat;filters.querySelectorAll('button').forEach(b=>b.classList.toggle('active',b===e.target));render()};render();
+
+// Supabase connection
+const SUPABASE_URL = "https://mkxhosiptmmhotlqcqpy.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_dvVyamZ5BKFopo_O2nC3EA_VaHxHEbA";
+
+const supabaseClient = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_PUBLISHABLE_KEY
+);
