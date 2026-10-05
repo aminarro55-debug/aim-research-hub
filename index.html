@@ -1,12 +1,418 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="AIM Research Hub: research-product catalog with educational literature links and analytical-testing resources.">
-<title>AIM Research Hub | Research Library</title><link rel="stylesheet" href="styles.css"></head><body>
-<header><a class="brand" href="#top"><span>A</span>AIM Research Hub</a><nav><a href="#catalog">Catalog</a><a href="#evidence">Evidence Guide</a><a href="#testing">Testing</a><a href="#disclosure">Disclosure</a></nav></header>
-<main id="top"><section class="hero"><div class="eyebrow">RESEARCH LITERACY • VERSION 3</div><h1>Research the compound.<br><em>Follow the evidence.</em></h1><p>A searchable educational catalog connecting research materials to scientific literature and analytical documentation.</p><a class="btn" href="#catalog">Browse the catalog</a><small>Educational information only. Not medical advice. No dosing, administration, or self-experimentation guidance.</small></section>
-<section class="notice"><b>Important distinction</b><p>A research supplier's product page, a certificate of analysis, and a peer-reviewed paper answer different questions. A paper about a molecule does not validate a particular commercial vial, and a COA does not establish clinical safety or effectiveness.</p></section>
-<section id="catalog" class="section"><div class="heading"><div><div class="eyebrow">RESEARCH CATALOG</div><h2>Compound library</h2></div><p>This V4 catalog includes VNG materials we could independently verify from VNG's indexed product pages. It can be expanded as additional current catalog pages are verified.</p></div>
-<div class="search"><input id="search" placeholder="Search compounds or research categories…"><span id="count"></span></div><div id="filters"></div><div id="grid" class="grid"></div></section>
-<section id="evidence" class="section dark"><div class="eyebrow">EVIDENCE GUIDE</div><h2>Read studies with context.</h2><div class="cols"><article><b>Human clinical</b><p>Randomized trials and well-designed clinical studies can answer questions that cell and animal models cannot.</p></article><article><b>Preclinical</b><p>Animal and cell studies can identify mechanisms and hypotheses, but should not be presented as proven human outcomes.</p></article><article><b>Search, don't cherry-pick</b><p>Each compound links to a PubMed literature search so readers can see a broader body of research rather than one hand-selected paper.</p></article></div></section>
-<section id="testing" class="section"><div class="eyebrow">ANALYTICAL TESTING</div><h2>Literature ≠ product verification.</h2><p class="wide">Peer-reviewed research concerns the molecule or intervention studied by those investigators. Commercial product identity, purity, quantity, sterility, and contaminants are separate analytical questions. Review lot-specific documentation independently.</p></section>
-<section id="disclosure" class="section disclosure"><div><div class="eyebrow">AFFILIATE DISCLOSURE</div><h2>Code AIM</h2><p>AIM Research Hub participates in the VNG Labs affiliate program and may earn a commission from qualifying purchases through its referral links. This financial relationship is disclosed so readers can evaluate our content with appropriate context.</p><a class="btn" href="https://vnglabs.com/?ref=AIM" target="_blank" rel="sponsored noopener">Visit VNG Labs ↗</a></div><aside><b>Research-use positioning</b><p>VNG describes these materials as laboratory research/reference materials and not for human or animal consumption. AIM does not provide dosing, injection, reconstitution, treatment, or individualized medical-use instructions.</p></aside></section></main>
-<footer><div class="brand"><span>A</span>AIM Research Hub</div><p>Educational and research-information purposes only.</p></footer><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="script.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta
+    name="description"
+    content="AIM Research Hub: educational research library, scientific literature resources, analytical-testing information, and community features."
+  >
+
+  <title>AIM Research Hub | Research Library</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+  <a class="brand" href="#top">
+    <span>A</span>
+    AIM Research Hub
+  </a>
+
+  <nav>
+    <a href="#catalog">Catalog</a>
+    <a href="#evidence">Evidence Guide</a>
+    <a href="#testing">Testing</a>
+    <a href="#community">Community</a>
+    <a href="#account">Account</a>
+    <a href="#disclosure">Disclosure</a>
+  </nav>
+</header>
+
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="eyebrow">
+      RESEARCH LITERACY • VERSION 5
+    </div>
+
+    <h1>
+      Research the compound.<br>
+      <em>Follow the evidence.</em>
+    </h1>
+
+    <p>
+      A searchable educational catalog connecting research materials
+      to scientific literature and analytical documentation.
+    </p>
+
+    <a class="button" href="#catalog">
+      Browse the catalog
+    </a>
+
+    <p class="small">
+      Educational information only. Not medical advice.
+      No dosing, administration, or self-experimentation guidance.
+    </p>
+  </section>
+
+
+  <!-- IMPORTANT DISTINCTION -->
+  <section class="notice">
+    <b>Important distinction</b>
+
+    <p>
+      A research supplier's product page, a certificate of analysis,
+      and a peer-reviewed paper answer different questions.
+      A paper about a molecule does not validate a particular commercial vial,
+      and a COA does not establish clinical safety or effectiveness.
+    </p>
+  </section>
+
+
+  <!-- CATALOG -->
+  <section id="catalog" class="section">
+
+    <div class="heading">
+      <div>
+        <div class="eyebrow">RESEARCH CATALOG</div>
+        <h2>Compound library</h2>
+      </div>
+
+      <p>
+        Explore compounds and follow each topic to its dedicated
+        educational research page.
+      </p>
+    </div>
+
+    <div class="search">
+      <input
+        id="search"
+        type="search"
+        placeholder="Search compounds or research categories..."
+        autocomplete="off"
+      >
+
+      <span id="count"></span>
+    </div>
+
+    <div id="filters"></div>
+
+    <div id="grid" class="grid"></div>
+
+  </section>
+
+
+  <!-- EVIDENCE GUIDE -->
+  <section id="evidence" class="section dark">
+
+    <div class="eyebrow">EVIDENCE GUIDE</div>
+
+    <h2>Read studies with context.</h2>
+
+    <div class="cols">
+
+      <article>
+        <b>Human clinical research</b>
+
+        <p>
+          Randomized trials and well-designed clinical studies can answer
+          questions that cell and animal studies cannot.
+        </p>
+      </article>
+
+      <article>
+        <b>Preclinical research</b>
+
+        <p>
+          Laboratory and animal research can help researchers understand
+          biological mechanisms, but findings do not automatically translate
+          to humans.
+        </p>
+      </article>
+
+      <article>
+        <b>Published literature</b>
+
+        <p>
+          Study design, population, endpoints, conflicts of interest,
+          and replication all matter when interpreting scientific findings.
+        </p>
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- TESTING -->
+  <section id="testing" class="section">
+
+    <div class="eyebrow">ANALYTICAL TESTING</div>
+
+    <h2>Literature ≠ product verification.</h2>
+
+    <div class="cols">
+
+      <article>
+        <b>Identity</b>
+
+        <p>
+          Analytical testing may help determine whether a sample contains
+          the compound it claims to contain.
+        </p>
+      </article>
+
+      <article>
+        <b>Purity</b>
+
+        <p>
+          Purity measurements describe the composition of the analyzed
+          sample and should not be confused with quantity or clinical safety.
+        </p>
+      </article>
+
+      <article>
+        <b>COA context</b>
+
+        <p>
+          Review the laboratory, test method, sample information,
+          testing date, and other documentation before interpreting a COA.
+        </p>
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- COMMUNITY -->
+  <section id="community" class="section dark">
+
+    <div class="eyebrow">AIM COMMUNITY</div>
+
+    <h2>Research discussions in one place.</h2>
+
+    <p>
+      The community area is being built for registered members to discuss
+      published research, share educational resources, and participate
+      in research-focused conversations.
+    </p>
+
+    <div id="communityLoggedOut">
+      <p>
+        Create an account or log in to access member features as they become
+        available.
+      </p>
+
+      <a class="button" href="#account">
+        Create an account
+      </a>
+    </div>
+
+    <div id="communityLoggedIn" style="display:none;">
+      <p>
+        You are logged in. Community posting features are coming next.
+      </p>
+
+      <p id="communityUser"></p>
+    </div>
+
+  </section>
+
+
+  <!-- ACCOUNT -->
+  <section id="account" class="section">
+
+    <div class="eyebrow">MEMBER ACCOUNT</div>
+
+    <h2>Join AIM Research Hub.</h2>
+
+    <p>
+      Create a free account to access upcoming community features.
+    </p>
+
+
+    <!-- LOGGED OUT VIEW -->
+    <div id="authLoggedOut">
+
+      <div class="cols">
+
+        <!-- SIGN UP -->
+        <article>
+
+          <h3>Create account</h3>
+
+          <label for="signupEmail">Email</label>
+
+          <input
+            id="signupEmail"
+            type="email"
+            placeholder="you@example.com"
+            autocomplete="email"
+          >
+
+          <label for="signupPassword">Password</label>
+
+          <input
+            id="signupPassword"
+            type="password"
+            placeholder="Create a password"
+            autocomplete="new-password"
+          >
+
+          <br><br>
+
+          <button
+            class="button"
+            id="signupButton"
+            type="button"
+          >
+            Sign up
+          </button>
+
+          <p id="signupMessage" class="small"></p>
+
+        </article>
+
+
+        <!-- LOGIN -->
+        <article>
+
+          <h3>Log in</h3>
+
+          <label for="loginEmail">Email</label>
+
+          <input
+            id="loginEmail"
+            type="email"
+            placeholder="you@example.com"
+            autocomplete="email"
+          >
+
+          <label for="loginPassword">Password</label>
+
+          <input
+            id="loginPassword"
+            type="password"
+            placeholder="Password"
+            autocomplete="current-password"
+          >
+
+          <br><br>
+
+          <button
+            class="button"
+            id="loginButton"
+            type="button"
+          >
+            Log in
+          </button>
+
+          <p id="loginMessage" class="small"></p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+
+    <!-- LOGGED IN VIEW -->
+    <div id="authLoggedIn" style="display:none;">
+
+      <article>
+
+        <div class="eyebrow">SIGNED IN</div>
+
+        <h3>Welcome to AIM Research Hub.</h3>
+
+        <p>
+          Logged in as:
+          <strong id="userEmail"></strong>
+        </p>
+
+        <button
+          class="button"
+          id="logoutButton"
+          type="button"
+        >
+          Log out
+        </button>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- AFFILIATE DISCLOSURE -->
+  <section id="disclosure" class="section disclosure">
+
+    <div>
+
+      <div class="eyebrow">
+        AFFILIATE DISCLOSURE
+      </div>
+
+      <h2>Code AIM</h2>
+
+      <p>
+        AIM Research Hub participates in the VNG Labs affiliate program
+        and may earn a commission from qualifying purchases made through
+        its referral link.
+      </p>
+
+      <p>
+        Supplier information and scientific literature should be evaluated
+        independently. Commercial availability does not establish safety,
+        efficacy, or suitability for human use.
+      </p>
+
+      <a
+        class="button"
+        href="https://vnglabs.com/?ref=AIM"
+        target="_blank"
+        rel="sponsored noopener"
+      >
+        Visit VNG Labs — Code AIM
+      </a>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <div class="brand">
+    <span>A</span>
+    AIM Research Hub
+  </div>
+
+  <p>
+    Educational and research-information purposes only.
+  </p>
+
+  <p class="small">
+    © 2026 AIM Research Hub
+  </p>
+
+</footer>
+
+
+<!-- SUPABASE MUST LOAD BEFORE OUR SCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
