@@ -1,9 +1,16 @@
-# AIM Research Hub
+# AIM Research Hub — Version 2
 
-Mobile-first educational website focused on research literacy, analytical testing, purity, and certificates of analysis.
+Mobile-first educational website focused on research literacy, peptide research terminology, analytical testing, purity, and certificates of analysis.
 
-## Affiliate disclosure
-AIM Research Hub participates in the VNG Labs affiliate program and may receive compensation when visitors use its referral link or code.
+## Features
+- Searchable research library
+- Topic filters
+- Educational compound overviews
+- COA/testing guide
+- Mobile navigation
+- Affiliate disclosure
+- VNG Labs referral link with Code AIM
+- Basic SEO metadata and structured data
 
-## Disclaimer
-Educational and research-information purposes only. Not medical advice. Research materials discussed on this site are not presented for human consumption.
+## Important
+Educational and research-information purposes only. Not medical advice. The site intentionally does not provide dosing, reconstitution, injection, or individualized treatment instructions.

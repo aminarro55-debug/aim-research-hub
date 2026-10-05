@@ -1,90 +1,37 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="AIM Research Hub — independent educational resources for understanding peptide research, COAs, purity, and laboratory testing.">
-  <title>AIM Research Hub</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="AIM Research Hub: educational guides to peptide research, analytical testing, certificates of analysis, and research literacy.">
+<title>AIM Research Hub | Peptide Research Education</title>
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"AIM Research Hub","description":"Independent educational resources for peptide research literacy and analytical testing."}</script>
 </head>
 <body>
-<header class="nav">
-  <a class="brand" href="#top"><span class="mark">A</span>AIM Research Hub</a>
-  <button class="menu" aria-label="Open navigation" onclick="document.body.classList.toggle('open')">☰</button>
-  <nav>
-    <a href="#library">Research Library</a>
-    <a href="#testing">Testing & COAs</a>
-    <a href="#faq">FAQ</a>
-    <a href="#about">About</a>
-  </nav>
-</header>
-
+<header class="nav"><a class="brand" href="#top"><span>A</span>AIM Research Hub</a><button id="menu">☰</button><nav><a href="#library">Library</a><a href="#testing">Testing & COAs</a><a href="#faq">FAQ</a><a href="#about">About</a><a class="navcta" href="#partner">Research Products</a></nav></header>
 <main id="top">
-<section class="hero">
-  <div class="eyebrow">INDEPENDENT RESEARCH EDUCATION</div>
-  <h1>Understand the research.<br><span>Read the data.</span></h1>
-  <p class="lead">A straightforward educational hub for learning about peptide research, analytical testing, purity reports, and certificates of analysis.</p>
-  <div class="actions">
-    <a class="button primary" href="#library">Explore the library</a>
-    <a class="button secondary" href="#testing">Learn how to read a COA</a>
-  </div>
-  <p class="fine">Educational content only. Not medical advice. Research materials discussed on this site are not presented for human consumption.</p>
-</section>
+<section class="hero"><div class="eyebrow">INDEPENDENT RESEARCH EDUCATION</div><h1>Understand the research.<br><em>Read the data.</em></h1><p>Clear, evidence-minded guides to peptide research terminology, analytical testing, purity reports, and certificates of analysis.</p><div class="actions"><a class="btn primary" href="#library">Explore the library</a><a class="btn ghost" href="#testing">COA guide</a></div><small>Educational information only. Not medical advice. Research materials discussed here are not presented for human consumption.</small></section>
+<section class="trust"><div><b>Research literacy</b><span>Learn the terminology</span></div><div><b>Analytical testing</b><span>Understand what results mean</span></div><div><b>Transparent affiliation</b><span>Affiliate relationships disclosed</span></div></section>
 
-<section class="stats">
-  <div><strong>Research first</strong><span>Evidence-focused explainers</span></div>
-  <div><strong>Testing matters</strong><span>Understand analytical reports</span></div>
-  <div><strong>Plain English</strong><span>Complex topics made approachable</span></div>
-</section>
+<section class="section" id="library"><div class="heading"><div><div class="eyebrow">RESEARCH LIBRARY</div><h2>Learn by topic</h2></div><p>Search educational summaries. These pages describe research context, not dosing or treatment recommendations.</p></div>
+<div class="search"><input id="search" placeholder="Search the research library…" aria-label="Search library"><span id="count"></span></div>
+<div id="filters"><button class="active" data-filter="all">All</button><button data-filter="metabolic">Metabolic research</button><button data-filter="recovery">Tissue research</button><button data-filter="endocrine">Endocrine research</button><button data-filter="neuro">Neuroscience</button></div>
+<div class="grid" id="cards"></div></section>
 
-<section id="library" class="section">
-  <div class="section-head"><div><span class="eyebrow">LIBRARY</span><h2>Start with the fundamentals</h2></div><p>Build a foundation before evaluating any research compound or supplier.</p></div>
-  <div class="cards">
-    <article class="card"><span>01</span><h3>What are peptides?</h3><p>An introduction to short chains of amino acids and why they are studied across many areas of laboratory research.</p><button onclick="showArticle('peptides')">Read overview →</button></article>
-    <article class="card"><span>02</span><h3>Purity ≠ identity</h3><p>Why a high purity percentage is only one part of evaluating a research sample.</p><button onclick="showArticle('purity')">Learn the difference →</button></article>
-    <article class="card"><span>03</span><h3>Reading a COA</h3><p>Learn what a certificate of analysis can tell you—and what it cannot.</p><button onclick="showArticle('coa')">Open the guide →</button></article>
-  </div>
-</section>
+<section class="section dark" id="testing"><div class="eyebrow">TESTING & COAs</div><h2>How to evaluate analytical documentation</h2><p class="intro">A polished report is not enough. Evaluate what was tested, how it was tested, and whether the documentation is traceable to the sample being discussed.</p>
+<div class="steps"><article><b>01</b><h3>Sample identity</h3><p>Look for an unambiguous sample or batch identifier and confirm it matches the material being represented.</p></article><article><b>02</b><h3>Test method</h3><p>Identify the analytical method and understand what that method actually measures.</p></article><article><b>03</b><h3>Purity vs. quantity</h3><p>A purity percentage and the total amount of material are different measurements.</p></article><article><b>04</b><h3>Laboratory & date</h3><p>Check laboratory information, report dates, signatures or verification mechanisms, where applicable.</p></article></div>
+<div class="callout"><strong>A COA has limits.</strong><p>A certificate of analysis reports particular test results for a sample. It does not automatically establish sterility, safety, regulatory approval, clinical effectiveness, or suitability for human use.</p></div></section>
 
-<section id="testing" class="section dark">
-  <span class="eyebrow">TESTING & COAs</span>
-  <h2>Don't stop at the headline number.</h2>
-  <p class="lead small">When reviewing analytical documentation, look for the test method, sample identification, laboratory information, dates, results, and whether the report actually supports the claim being made.</p>
-  <div class="checkgrid">
-    <div><b>01</b><h3>Identity</h3><p>Does the analysis support that the sample is the compound it claims to be?</p></div>
-    <div><b>02</b><h3>Purity</h3><p>What method produced the reported purity result, and what does that measurement represent?</p></div>
-    <div><b>03</b><h3>Quantity</h3><p>Purity and total amount are different measurements. Don't assume one proves the other.</p></div>
-    <div><b>04</b><h3>Traceability</h3><p>Check sample identifiers, report dates, laboratory details, and whether documentation can be independently verified.</p></div>
-  </div>
-</section>
+<section class="section partner" id="partner"><div><div class="eyebrow">AFFILIATE PARTNER</div><h2>Research products through VNG Labs</h2><p>AIM Research Hub participates in the VNG Labs affiliate program. If you choose to visit or purchase through our referral, AIM may receive a commission. Evaluate supplier documentation independently.</p><div class="promo"><span>CODE</span><strong>AIM</strong><span>10% OFF</span></div><a class="btn primary" href="https://vnglabs.com/?ref=AIM" target="_blank" rel="sponsored noopener">Visit VNG Labs ↗</a></div><aside><b>Why disclose this?</b><p>Readers should know when a financial relationship exists. An affiliate relationship is not evidence that a product is safe, effective, approved, or suitable for any particular use.</p></aside></section>
 
-<section id="partner" class="section partner">
-  <div>
-    <span class="eyebrow">AFFILIATE PARTNER</span>
-    <h2>Looking for VNG Labs?</h2>
-    <p>AIM Research Hub participates in the VNG Labs affiliate program. Purchases made through our referral link may earn us a commission. This relationship does not change our commitment to clear educational information.</p>
-    <p class="code">CODE <strong>AIM</strong> <span>10% OFF</span></p>
-    <a class="button primary" href="https://vnglabs.com/?ref=AIM" target="_blank" rel="sponsored noopener">Visit VNG Labs ↗</a>
-  </div>
-  <aside><strong>Affiliate disclosure</strong><p>We may receive compensation when you use our referral link or code. Always evaluate supplier documentation independently rather than treating an affiliate relationship as evidence of product quality.</p></aside>
-</section>
+<section class="section" id="faq"><div class="eyebrow">FAQ</div><h2>Questions worth asking</h2>
+<details><summary>What is AIM Research Hub?</summary><p>An independent educational website focused on research literacy, peptide terminology, and understanding analytical documentation.</p></details>
+<details><summary>Does AIM provide medical advice or protocols?</summary><p>No. The site does not provide diagnosis, prescribing, individualized treatment, dosing, injection, or medical-use protocols.</p></details>
+<details><summary>Does high purity prove identity or safety?</summary><p>No. Purity, identity, quantity, sterility, and safety are distinct questions. A single headline percentage cannot answer all of them.</p></details>
+<details><summary>Is AIM affiliated with VNG Labs?</summary><p>Yes. AIM participates in VNG Labs' affiliate program and may receive compensation from qualifying purchases made through its referral link or code.</p></details></section>
 
-<section id="faq" class="section">
-  <span class="eyebrow">FAQ</span><h2>Common questions</h2>
-  <details><summary>Is AIM Research Hub a medical provider?</summary><p>No. AIM Research Hub is an educational resource and does not provide diagnosis, treatment, prescribing, dosing, or individualized medical advice.</p></details>
-  <details><summary>Does a COA guarantee a product is safe?</summary><p>No. A COA reports particular analytical results for a tested sample. It should not be interpreted as a guarantee of safety, suitability, sterility, or clinical effectiveness.</p></details>
-  <details><summary>Why does AIM have a VNG link?</summary><p>AIM participates in an affiliate relationship with VNG Labs. If you purchase through the referral link or use code AIM, AIM may receive a commission.</p></details>
-</section>
-
-<section id="about" class="section about">
-  <span class="eyebrow">ABOUT</span><h2>Research literacy over hype.</h2>
-  <p>AIM Research Hub exists to make research terminology and analytical documentation easier to understand. The goal is simple: help readers ask better questions and evaluate evidence more carefully.</p>
-</section>
+<section class="section about" id="about"><div class="eyebrow">ABOUT AIM</div><h2>Research literacy over hype.</h2><p>Our goal is to make technical research concepts easier to understand so readers can ask better questions, interpret analytical claims more carefully, and distinguish evidence from marketing.</p></section>
 </main>
-
-<div id="modal" class="modal" onclick="if(event.target===this)closeArticle()"><div class="modalbox"><button class="close" onclick="closeArticle()">×</button><div id="article"></div></div></div>
-
-<footer><div class="brand"><span class="mark">A</span>AIM Research Hub</div><p>For educational and research-information purposes only. Not medical advice.</p><p>© 2026 AIM Research Hub</p></footer>
-<script src="script.js"></script>
-</body>
-</html>
+<div class="modal" id="modal"><article><button id="close">×</button><div id="modalContent"></div></article></div>
+<footer><div class="brand"><span>A</span>AIM Research Hub</div><p>Educational and research-information purposes only. Not medical advice.</p><p>© 2026 AIM Research Hub</p></footer>
+<script src="script.js"></script></body></html>
