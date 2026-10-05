@@ -1,12 +1,13 @@
-# AIM Research Hub — V3
+# AIM Research Hub — V4
+V4 gives every catalog entry its own indexable research page.
 
-V3 adds a verified VNG research-material catalog and PubMed literature-search links.
+## New in V4
+- 20 dedicated compound pages.
+- Internal research-page links from the catalog.
+- Published-study dose/route context only when supported by a cited source.
+- Detailed verified study spotlights currently included for tesamorelin and tirzepatide.
+- All other pages deliberately link to broader PubMed literature rather than inventing dose protocols.
+- Strong separation between clinical-trial formulations and commercial research materials.
+- No reconstitution, injection, self-administration, or individualized dosing instructions.
 
-## Catalog scope
-This build includes VNG product pages that were independently verifiable from currently indexed VNG pages during the build. It deliberately does not invent missing catalog items. Additions should be verified against the current official VNG catalog before publishing.
-
-## Evidence policy
-- PubMed search links are used to expose the broader literature rather than cherry-picking one study.
-- Literature about a molecule is not represented as verification of a commercial product.
-- Blends should be interpreted through evidence on their individual components unless research on the exact blend exists.
-- No dosing, administration, injection, reconstitution, or individualized treatment guidance.
+Upload `index.html`, `styles.css`, `script.js`, `compound.css`, the entire `compounds` folder, and this README to the repository root.
